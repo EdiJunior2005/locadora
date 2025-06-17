@@ -7,7 +7,9 @@ services:
     ports:
       - '3307:3306'
     volumes:
-      - mysql_data:/var/lib/mysql
+    - locadora_mysql_data:/var/lib/mysql
+
 
 volumes:
-  mysql_data:
+  locadora_mysql_data:
+

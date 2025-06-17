@@ -1,4 +1,4 @@
-package com.esoft.teste_spring.Exceptions;
+package com.PA.locadora.Exceptions;
 
 public class DeleteNegadoException extends RuntimeException {
     public DeleteNegadoException(String mensagem) {

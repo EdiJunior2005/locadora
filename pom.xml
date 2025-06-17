@@ -8,11 +8,11 @@
 		<version>3.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.esoft</groupId>
-	<artifactId>teste_spring</artifactId>
+	<groupId>com.locadora</groupId>
+	<artifactId>locadora</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>teste_spring</name>
-	<description>Projeto de teste para aula de PA</description>
+	<name>locadora</name>
+	<description>Projeto de locadora</description>
 	<url/>
 	<licenses>
 		<license/>

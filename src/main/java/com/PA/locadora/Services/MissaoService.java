@@ -1,16 +1,16 @@
-package com.esoft.teste_spring.Services;
+package com.PA.locadora.Services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.esoft.teste_spring.DTOs.MissaoDTO;
-import com.esoft.teste_spring.Exceptions.DeleteNegadoException;
-import com.esoft.teste_spring.Exceptions.NaoEncontradoException;
-import com.esoft.teste_spring.models.Missao;
-import com.esoft.teste_spring.models.Ninja;
-import com.esoft.teste_spring.repositories.MissaoRepository;
-import com.esoft.teste_spring.repositories.NinjaRepository;
+import com.PA.locadora.DTOs.MissaoDTO;
+import com.PA.locadora.Exceptions.DeleteNegadoException;
+import com.PA.locadora.Exceptions.NaoEncontradoException;
+import com.PA.locadora.models.Missao;
+import com.PA.locadora.models.Ninja;
+import com.PA.locadora.repositories.MissaoRepository;
+import com.PA.locadora.repositories.NinjaRepository;
 
 import jakarta.transaction.Transactional;
 

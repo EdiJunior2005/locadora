@@ -1,11 +1,11 @@
-package com.esoft.teste_spring.Controllers;
+package com.PA.locadora.Controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.esoft.teste_spring.DTOs.NinjaDTO;
-import com.esoft.teste_spring.Services.NinjaService;
-import com.esoft.teste_spring.models.Ninja;
+import com.PA.locadora.DTOs.NinjaDTO;
+import com.PA.locadora.Services.NinjaService;
+import com.PA.locadora.models.Ninja;
 
 import jakarta.websocket.server.PathParam;
 

@@ -1,4 +1,4 @@
-package com.esoft.teste_spring.models;
+package com.PA.locadora.models;
 
 import jakarta.persistence.*;
 import lombok.*;

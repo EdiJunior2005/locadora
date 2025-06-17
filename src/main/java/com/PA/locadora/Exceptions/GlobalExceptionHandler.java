@@ -1,4 +1,4 @@
-package com.esoft.teste_spring.Exceptions;
+package com.PA.locadora.Exceptions;
 
 import java.util.Date;
 import java.util.LinkedHashMap;

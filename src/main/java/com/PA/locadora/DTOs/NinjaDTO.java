@@ -1,6 +1,6 @@
-package com.esoft.teste_spring.DTOs;
+package com.PA.locadora.DTOs;
 
-import com.esoft.teste_spring.models.Ninja;
+import com.PA.locadora.models.Ninja;
 
 public record NinjaDTO(
         Long id,

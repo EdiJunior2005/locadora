@@ -1,11 +1,11 @@
-package com.esoft.teste_spring.models;
+package com.PA.locadora.models;
 
 import java.util.List;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import com.esoft.teste_spring.DTOs.MissaoDTO;
+import com.PA.locadora.DTOs.MissaoDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

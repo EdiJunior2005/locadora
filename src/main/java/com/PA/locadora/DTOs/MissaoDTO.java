@@ -1,8 +1,8 @@
-package com.esoft.teste_spring.DTOs;
+package com.PA.locadora.DTOs;
 
 import java.util.List;
 
-import com.esoft.teste_spring.models.Missao;
+import com.PA.locadora.models.Missao;
 
 public record MissaoDTO(
                 Long id,

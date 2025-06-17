@@ -1,4 +1,4 @@
-package com.esoft.teste_spring;
+package com.PA.locadora;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
