@@ -10,20 +10,18 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_jutsu")
-public class Jutsu {
+@Table(name = "customers")
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
+    private String name;
 
-    private String descricao;
+    private String phone;
 
-    private String dificuldade;
+    private String address;
 
-    @ManyToMany(mappedBy = "jutsus")
-    private List<Ninja> ninjas;
 }

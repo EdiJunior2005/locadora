@@ -5,7 +5,7 @@ import java.util.List;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import com.PA.locadora.DTOs.MissaoDTO;
+import com.PA.locadora.DTOs.CategoryDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,26 +25,22 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_missoes")
-public class Missao {
+@Table(name = "categories")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
-    private String descricao;
-    private String dificuldade;
+    private String name;
+    private String description;
 
-    @OneToMany(mappedBy = "missao")
-    private List<Ninja> ninjas;
 
-    public Missao(MissaoDTO missao) {
+    public Category(CategoryDTO missao) {
         this.id = missao.id();
-        this.nome = missao.nome();
-        this.descricao = missao.descricao();
-        this.dificuldade = missao.dificuldade();
+        this.name = missao.name();
+        this.description = missao.description();
     }
 
 }

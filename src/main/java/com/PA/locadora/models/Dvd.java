@@ -3,7 +3,7 @@ package com.PA.locadora.models;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import com.PA.locadora.DTOs.NinjaDTO;
+import com.PA.locadora.DTOs.RentalDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,42 +28,28 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_ninja")
-public class Ninja {
+@Table(name = "dvds")
+public class Dvd {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String nome;
+    @Column(nullable = false, length = 45)
+    private String title;
 
-    @Column(nullable = false)
-    private int idade;
+    @Column(nullable = false, length = 45)
+    private String author;
 
-    private String cla;
+    @Column(nullable = false, length = 45)
+    private String duration;
+
+    @Column(name = "classification", nullable = false, length = 45)
+    private String classification;
 
     @ManyToOne
-    @JoinColumn(name = "vila_id", nullable = false)
-    private Vila vila;
-
-    @ManyToOne
-    @JoinColumn(name = "missao_id")
-    private Missao missao;
-
-    @ManyToMany
-    @JoinTable(
-        name = "tb_ninja_jutsu",
-        joinColumns = @JoinColumn(name = "ninja_id"),
-        inverseJoinColumns = @JoinColumn(name = "jutsu_id")
-    )
-    private List<Jutsu> jutsus;
-
-    public Ninja(NinjaDTO ninja) {
-        this.id = ninja.id();
-        this.nome = ninja.nome();
-        this.idade = ninja.idade();
-        this.cla = ninja.cla();
-    }
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
 
 }
+
