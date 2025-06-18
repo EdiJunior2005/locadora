@@ -1,7 +1,7 @@
 package com.PA.locadora.Controllers;
 
-import com.PA.locadora.DTOs.EmprestimoDTO;
-import com.PA.locadora.Services.EmprestimoService;
+import com.PA.locadora.DTOs.RentalDTO;
+import com.PA.locadora.Services.RentalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,28 +9,28 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/emprestimos")
-public class EmprestimoController {
+public class RentalController {
 
     @Autowired
-    private EmprestimoService service;
+    private RentalService service;
 
     @GetMapping
-    public List<EmprestimoDTO> listar() {
+    public List<RentalDTO> listar() {
         return service.listar();
     }
 
     @GetMapping("/{id}")
-    public EmprestimoDTO buscarPorId(@PathVariable Long id) {
+    public RentalDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
     @PostMapping("/{clienteId}/{filmeId}")
-    public EmprestimoDTO criar(@PathVariable Long clienteId, @PathVariable Long filmeId) {
+    public RentalDTO criar(@PathVariable Long clienteId, @PathVariable Long filmeId) {
         return service.criar(clienteId, filmeId);
     }
 
     @PutMapping("/devolver/{id}")
-    public EmprestimoDTO devolver(@PathVariable Long id) {
+    public RentalDTO devolver(@PathVariable Long id) {
         return service.devolver(id);
     }
 

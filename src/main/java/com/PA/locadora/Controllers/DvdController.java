@@ -1,37 +1,37 @@
 package com.PA.locadora.Controllers;
 
-import com.PA.locadora.DTOs.FilmeDTO;
-import com.PA.locadora.Services.FilmeService;
-import com.PA.locadora.models.Filme;
+import com.PA.locadora.DTOs.DvdDTO;
+import com.PA.locadora.Services.DvdService;
+import com.PA.locadora.models.Dvd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/filmes")
-public class FilmeController {
+@RequestMapping("/dvd")
+public class DvdController {
 
     @Autowired
-    private FilmeService service;
+    private DvdService service;
 
     @GetMapping
-    public List<FilmeDTO> listar() {
+    public List<DvdDTO> listar() {
         return service.listar();
     }
 
     @GetMapping("/{id}")
-    public FilmeDTO buscarPorId(@PathVariable Long id) {
+    public DvdDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
     @PostMapping
-    public FilmeDTO criar(@RequestBody Filme filme) {
+    public DvdDTO criar(@RequestBody Dvd filme) {
         return service.criar(filme);
     }
 
     @PutMapping("/{id}")
-    public FilmeDTO atualizar(@PathVariable Long id, @RequestBody Filme filme) {
+    public DvdDTO atualizar(@PathVariable Long id, @RequestBody Dvd filme) {
         return service.atualizar(id, filme);
     }
 

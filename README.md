@@ -1,12 +1,12 @@
-# Locadora de Filmes - CRUD em Java Spring
+# Locadora de Dvds - CRUD em Java Spring
 
-Este projeto consiste em um sistema CRUD para uma locadora de filmes, implementado com Java e Spring Boot, com persistência via banco de dados relacional. O sistema gerencia as entidades principais de uma locadora: *Filmes, **Clientes, **Empréstimos, **Funcionários* e *Categorias*.
+Este projeto consiste em um sistema CRUD para uma locadora de filmes, implementado com Java e Spring Boot, com persistência via banco de dados relacional. O sistema gerencia as entidades principais de uma locadora: *Dvds, **Customers, **Empréstimos, **Funcionários* e *Categorias*.
 
 ---
 
 ## 📦 Entidades
 
-### 🎬 Filme
+### 🎬 Dvd
 - id: Identificador único
 - titulo: Nome do filme
 - genero: Gênero do filme (ex: Ação, Drama)
@@ -14,7 +14,7 @@ Este projeto consiste em um sistema CRUD para uma locadora de filmes, implementa
 - disponivel: Booleano que indica se o filme está disponível para empréstimo
 - categoria: Categoria do filme (ex: Lançamento, Promoção)
 
-### 👤 Cliente
+### 👤 Customer
 - id: Identificador único
 - nome: Nome completo
 - cpf: CPF válido
@@ -25,7 +25,7 @@ Este projeto consiste em um sistema CRUD para uma locadora de filmes, implementa
 - id: Identificador único
 - cliente: Referência ao cliente
 - filme: Referência ao filme
-- dataEmprestimo: Data do empréstimo
+- dataRental: Data do empréstimo
 - dataDevolucao: Data da devolução (opcional até ser devolvido)
 - devolvido: Booleano indicando se o filme já foi devolvido
 
@@ -43,14 +43,14 @@ Este projeto consiste em um sistema CRUD para uma locadora de filmes, implementa
 
 ## 🔄 Funcionalidades CRUD por entidade
 
-### Cliente
+### Customer
 - GET /clientes - Lista todos os clientes
 - GET /clientes/{id} - Busca cliente por ID
 - POST /clientes - Cadastra um novo cliente
 - PUT /clientes/{id} - Atualiza os dados de um cliente
 - DELETE /clientes/{id} - Remove um cliente
 
-### Filme
+### Dvd
 - GET /filmes
 - GET /filmes/{id}
 - POST /filmes

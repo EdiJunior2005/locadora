@@ -1,8 +1,8 @@
 package com.PA.locadora.Controllers;
 
-import com.PA.locadora.DTOs.ClienteDTO;
-import com.PA.locadora.Services.ClienteService;
-import com.PA.locadora.models.Cliente;
+import com.PA.locadora.DTOs.CustomerDTO;
+import com.PA.locadora.Services.CustomerService;
+import com.PA.locadora.models.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,28 +10,28 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
-public class ClienteController {
+public class CustomerController {
 
     @Autowired
-    private ClienteService service;
+    private CustomerService service;
 
     @GetMapping
-    public List<ClienteDTO> listar() {
+    public List<CustomerDTO> listar() {
         return service.listar();
     }
 
     @GetMapping("/{id}")
-    public ClienteDTO buscarPorId(@PathVariable Long id) {
+    public CustomerDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
     @PostMapping
-    public ClienteDTO criar(@RequestBody Cliente cliente) {
+    public CustomerDTO criar(@RequestBody Customer cliente) {
         return service.criar(cliente);
     }
 
     @PutMapping("/{id}")
-    public ClienteDTO atualizar(@PathVariable Long id, @RequestBody Cliente cliente) {
+    public CustomerDTO atualizar(@PathVariable Long id, @RequestBody Customer cliente) {
         return service.atualizar(id, cliente);
     }
 

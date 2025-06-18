@@ -1,8 +1,8 @@
 package com.PA.locadora.Controllers;
 
-import com.PA.locadora.DTOs.FuncionarioDTO;
-import com.PA.locadora.Services.FuncionarioService;
-import com.PA.locadora.models.Funcionario;
+import com.PA.locadora.DTOs.EmployeeDTO;
+import com.PA.locadora.Services.EmployeeService;
+import com.PA.locadora.models.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,18 +10,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/funcionarios")
-public class FuncionarioController {
+public class EmployeeController {
 
     @Autowired
-    private FuncionarioService service;
+    private EmployeeService service;
 
     @GetMapping
-    public List<FuncionarioDTO> listar() {
+    public List<EmployeeDTO> listar() {
         return service.listar();
     }
 
     @PostMapping
-    public FuncionarioDTO salvar(@RequestBody Funcionario funcionario) {
+    public EmployeeDTO salvar(@RequestBody Employee funcionario) {
         return service.salvar(funcionario);
     }
 }

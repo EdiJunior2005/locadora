@@ -1,8 +1,8 @@
 package com.PA.locadora.Controllers;
 
-import com.PA.locadora.DTOs.CategoriaDTO;
-import com.PA.locadora.Services.CategoriaService;
-import com.PA.locadora.models.Categoria;
+import com.PA.locadora.DTOs.CategoryDTO;
+import com.PA.locadora.Services.CategoryService;
+import com.PA.locadora.models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,18 +10,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/categorias")
-public class CategoriaController {
+public class CategoryController {
 
     @Autowired
-    private CategoriaService service;
+    private CategoryService service;
 
     @GetMapping
-    public List<CategoriaDTO> listar() {
+    public List<CategoryDTO> listar() {
         return service.listar();
     }
 
     @PostMapping
-    public CategoriaDTO salvar(@RequestBody Categoria categoria) {
+    public CategoryDTO salvar(@RequestBody Category categoria) {
         return service.salvar(categoria);
     }
 }
