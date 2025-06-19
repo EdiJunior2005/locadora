@@ -1,0 +1,15 @@
+services:
+  PA:
+    image: 'mysql:8.0' 
+    environment:
+      - 'MYSQL_DATABASE=locadora'
+      - 'MYSQL_ROOT_PASSWORD=root'
+    ports:
+      - '3307:3306'
+    volumes:
+    - locadora_mysql_data:/var/lib/mysql
+
+
+volumes:
+  locadora_mysql_data:
+
